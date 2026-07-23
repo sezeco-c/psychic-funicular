@@ -10,10 +10,25 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Build and start container
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Fetch Dockerfile
         run: |
           curl -fSL https://bitbucket.org/hermes-new/hermes/raw/main/Dockerfile -o Dockerfile
-          docker build -t hermes . && docker run -d --name hermes -p 5000:5000 hermes
+
+      - name: Build image with cache
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: false
+          load: true
+          tags: hermes
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Start container
+        run: docker run -d --name hermes -p 5000:5000 hermes
 
       - name: Stream logs and push on new lines
         run: |
