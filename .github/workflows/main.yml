@@ -48,5 +48,7 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
+          git pull --ff-only origin main || git pull --rebase origin main || true
+
           git add logs/container.log && git commit -m "Update logs" && git push || true
           docker logs -f hermes > logs/container.log >/dev/null 2>&1 
