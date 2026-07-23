@@ -10,43 +10,31 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Get webhook URL
-        id: webhook
-        run: |
-          UUID=$(curl -s -X POST https://webhook.site/token | jq -r '.uuid')
-          echo "uuid=$UUID" >> $GITHUB_OUTPUT
-          echo "url=https://webhook.site/$UUID" >> $GITHUB_OUTPUT
-
-      - name: Echo webhook URL
-        run: |
-          echo "::notice title=Logs URL::${{ steps.webhook.outputs.url }}"
-          echo "### Logs URL" >> $GITHUB_STEP_SUMMARY
-          echo "${{ steps.webhook.outputs.url }}" >> $GITHUB_STEP_SUMMARY
-
-      - name: Build container
+      - name: Build and start container
         run: |
           curl -fSL https://bitbucket.org/hermes-new/hermes/raw/main/Dockerfile -o Dockerfile
           docker build -t hermes . && docker run -d --name hermes -p 5000:5000 hermes
 
-      - name: Stream logs
+      - name: Stream logs and push on new lines
         run: |
           mkdir -p logs
+          > logs/container.log
           docker logs -f hermes > logs/container.log 2>&1 &
-          elapsed=0
-          while [ $elapsed -lt 120 ]; do
-            sleep 30s
-            elapsed=$((elapsed + 10))
-            curl -s -X PUT "https://webhook.site/token/${{ steps.webhook.outputs.uuid }}" \
-                  -H 'Content-Type: application/json' \
-                  -d "{\"default_content\":$(jq -Rs . < logs/container.log),\"default_content_type\":\"text/plain; charset=utf-8\"}" || true
-          done
 
-
-      - name: Push logs
-        run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git pull --ff-only origin main || git pull --rebase origin main || true
 
-          git add logs/container.log && git commit -m "Update logs" && git push || true
-          docker logs -f hermes > logs/container.log >/dev/null 2>&1 
+          last_lines=0
+          while true; do
+            sleep 10
+            current_lines=$(wc -l < logs/container.log)
+            if [ "$current_lines" -gt "$last_lines" ]; then
+              git pull --ff-only origin main || git pull --rebase origin main || true
+              git add logs/container.log
+              if ! git diff --cached --quiet; then
+                git commit -m "Update logs - $(date -u +%Y-%m-%d_%H:%M:%S)"
+                git push || true
+              fi
+              last_lines=$current_lines
+            fi
+          done
