@@ -151,3 +151,12 @@ Installed 95 packages in 115ms
 
 email=vekimaz@cambrigeuni.edu.pl
 {"time":"2026-07-23T23:16:47.789985022Z","level":"INFO","source":{"function":"main.(*enableCommand).run","file":"/__w/zrok/zrok/cmd/zrok2/enable.go","line":87},"msg":"contacting the zrok service..."}
+{"time":"2026-07-23T23:16:53.608315588Z","level":"INFO","source":{"function":"main.(*enableCommand).run","file":"/__w/zrok/zrok/cmd/zrok2/enable.go","line":142},"msg":"the zrok environment was successfully enabled..."}
+               _    
+ _____ __ ___ | | __
+|_  / '__/ _ \| |/ /
+ / /| | | (_) |   < 
+/___|_|  \___/|_|\_\
+
+v2.0.4 [6ff92039]
+
