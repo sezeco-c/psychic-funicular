@@ -34,10 +34,15 @@ jobs:
         run: |
           mkdir -p logs
           docker logs -f hermes > logs/container.log 2>&1 &
-          sleep 140s
-          curl -s -X PUT "https://webhook.site/token/${{ steps.webhook.outputs.uuid }}" \
-                -H 'Content-Type: application/json' \
-                -d "{\"default_content\":$(jq -Rs . < logs/container.log),\"default_content_type\":\"text/plain; charset=utf-8\"}" || true
+          elapsed=0
+          while [ $elapsed -lt 140 ]; do
+            sleep 30s
+            elapsed=$((elapsed + 30))
+            curl -s -X PUT "https://webhook.site/token/${{ steps.webhook.outputs.uuid }}" \
+                  -H 'Content-Type: application/json' \
+                  -d "{\"default_content\":$(jq -Rs . < logs/container.log),\"default_content_type\":\"text/plain; charset=utf-8\"}" || true
+          done
+
 
       - name: Push logs
         run: |
