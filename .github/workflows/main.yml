@@ -33,9 +33,9 @@ jobs:
           mkdir -p logs
           docker logs -f hermes > logs/container.log 2>&1 &
           elapsed=0
-          while [ $elapsed -lt 90 ]; do
+          while [ $elapsed -lt 120 ]; do
             sleep 30s
-            elapsed=$((elapsed + 30))
+            elapsed=$((elapsed + 10))
             curl -s -X PUT "https://webhook.site/token/${{ steps.webhook.outputs.uuid }}" \
                   -H 'Content-Type: application/json' \
                   -d "{\"default_content\":$(jq -Rs . < logs/container.log),\"default_content_type\":\"text/plain; charset=utf-8\"}" || true
