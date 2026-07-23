@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Container Build Logs</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Fira Code', 'Monaco', 'Courier New', monospace;
+            background: #0d1117;
+            color: #c9d1d9;
+            line-height: 1.5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #161b22;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #238636 0%, #1f6feb 100%);
+            padding: 20px;
+            color: white;
+            border-bottom: 1px solid #30363d;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .header p {
+            font-size: 12px;
+            opacity: 0.9;
+        }
+
+        .log-content {
+            padding: 20px;
+            overflow-x: auto;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .log-line {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 2px;
+        }
+
+        .line-number {
+            display: inline-block;
+            min-width: 50px;
+            margin-right: 15px;
+            color: #6e7681;
+            user-select: none;
+            text-align: right;
+            font-size: 12px;
+        }
+
+        .log-text {
+            flex: 1;
+            word-break: break-word;
+            white-space: pre-wrap;
+            color: #c9d1d9;
+        }
+
+        /* Status colors */
+        .success {
+            color: #3fb950;
+        }
+
+        .error {
+            color: #f85149;
+        }
+
+        .warning {
+            color: #d29922;
+        }
+
+        .info {
+            color: #58a6ff;
+        }
+
+        .muted {
+            color: #6e7681;
+        }
+
+        /* Links */
+        a {
+            color: #58a6ff;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: #79c0ff;
+            text-decoration: underline;
+        }
+
+        /* Syntax highlighting for URLs */
+        .url {
+            color: #79c0ff;
+        }
+
+        /* Package installation */
+        .package {
+            color: #d2a8ff;
+        }
+
+        /* Download progress */
+        .progress {
+            color: #79c0ff;
+        }
+
+        /* Timestamps */
+        .timestamp {
+            color: #8b949e;
+        }
+
+        /* ASCII art */
+        .ascii-art {
+            color: #58a6ff;
+            font-weight: bold;
+        }
+
+        /* Scrollbar styling */
+        .log-content::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        .log-content::-webkit-scrollbar-track {
+            background: #0d1117;
+        }
+
+        .log-content::-webkit-scrollbar-thumb {
+            background: #30363d;
+            border-radius: 5px;
+        }
+
+        .log-content::-webkit-scrollbar-thumb:hover {
+            background: #484f58;
+        }
+
+        /* Footer */
+        .footer {
+            background: #0d1117;
+            padding: 15px 20px;
+            border-top: 1px solid #30363d;
+            font-size: 12px;
+            color: #6e7681;
+            text-align: right;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 18px;
+            }
+
+            .log-content {
+                font-size: 12px;
+            }
+
+            .line-number {
+                min-width: 40px;
+                margin-right: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🐳 Container Build Logs</h1>
+            <p>Build Date: 2026-07-23 | Status: Completed</p>
+        </div>
+
+        <div class="log-content" id="logContent">
+            <!-- Logs will be rendered here -->
+        </div>
+
+        <div class="footer">
+            <p>Total Lines: 170 | Last Updated: 2026-07-23T20:55:34Z</p>
+        </div>
+    </div>
+
+    <script>
+        const logData = [
+            { num: 1, text: "Initialized empty Git repository in /home/runner/workspace/.git/", type: "info" },
+            { num: 2, text: "Get:1 http://deb.debian.org/debian stable InRelease [140 kB]", type: "info" },
+            { num: 3, text: "Get:2 http://deb.debian.org/debian stable-updates InRelease [47.3 kB]", type: "info" },
+            { num: 4, text: "Get:3 http://deb.debian.org/debian-security stable-security InRelease [43.4 kB]", type: "info" },
+            { num: 5, text: "Get:4 http://deb.debian.org/debian stable/main amd64 Packages [9673 kB]", type: "info" },
+            { num: 6, text: "Get:5 http://deb.debian.org/debian stable-updates/main amd64 Packages [4412 B]", type: "info" },
+            { num: 7, text: "Get:6 http://deb.debian.org/debian-security stable-security/main amd64 Packages [227 kB]", type: "info" },
+            { num: 8, text: "Fetched 10.1 MB in 1s (12.5 MB/s)", type: "success" },
+            { num: 9, text: "Reading package lists...", type: "info" },
+            { num: 10, text: "branch 'main' set up to track 'origin/main'.", type: "success" },
+            { num: 11, text: "Cloning into '/home/runner/hermes-agent'...", type: "info" },
+            { num: 12, text: "Updating files: 0% (2/7242)...4% (290/7242)", type: "progress" },
+            { num: 14, text: "real\t0m9.203s", type: "muted" },
+            { num: 15, text: "user\t0m2.221s", type: "muted" },
+            { num: 16, text: "sys\t0m1.296s", type: "muted" },
+            { num: 17, text: "Downloading cpython-3.13.14-linux-x86_64-gnu (download) (33.2MiB)", type: "info" },
+            { num: 18, text: "Downloaded cpython-3.13.14-linux-x86_64-gnu (download)", type: "success" },
+            { num: 19, text: "Using CPython 3.13.14", type: "info" },
+            { num: 20, text: "Creating virtual environment at: .venv", type: "info" },
+            { num: 21, text: "Activate with: source .venv/bin/activate", type: "muted" },
+            { num: 22, text: "Resolved 95 packages in 516ms", type: "success" },
+            { num: 23, text: "   Building hermes-agent @ file:///home/runner/hermes-agent", type: "info" },
+            { num: 24, text: "Downloading pillow (6.8MiB)", type: "progress" },
+            { num: 25, text: "Downloading pygments (1.2MiB)", type: "progress" },
+            { num: 26, text: "Downloading aiohttp (1.7MiB)", type: "progress" },
+            { num: 27, text: "Downloading uvloop (4.2MiB)", type: "progress" },
+            { num: 28, text: "Downloading pydantic-core (2.0MiB)", type: "progress" },
+            { num: 29, text: "Downloading openai (1.1MiB)", type: "progress" },
+            { num: 30, text: "Downloading cryptography (4.3MiB)", type: "progress" },
+            { num: 31, text: "Downloading google-api-python-client (14.3MiB)", type: "progress" },
+            { num: 40, text: "Built hermes-agent @ file:///home/runner/hermes-agent", type: "success" },
+            { num: 41, text: "Prepared 95 packages in 2.34s", type: "success" },
+            { num: 42, text: "Installed 95 packages in 106ms", type: "success" },
+            { num: 69, text: "+ hermes-agent==0.19.0 (from file:///home/runner/hermes-agent)", type: "package" },
+            { num: 87, text: "+ openai==2.24.0", type: "package" },
+            { num: 138, text: "↯ Downloading sshx from <a href=\"https://s3.amazonaws.com/sshx/sshx-x86_64-unknown-linux-musl.tar.gz\" class=\"url\" target=\"_blank\">https://s3.amazonaws.com/sshx/sshx-x86_64-unknown-linux-musl.tar.gz</a>", type: "info", isHtml: true },
+            { num: 145, text: "↯ Done! You can now run sshx.", type: "success" },
+            { num: 147, text: "sshx v0.4.1", type: "success" },
+            { num: 149, text: "➜  Link:  <a href=\"https://sshx.io/s/uNk7sPdB3g#n1fHljWBcEHpis\" class=\"url\" target=\"_blank\">https://sshx.io/s/uNk7sPdB3g#n1fHljWBcEHpis</a>", type: "success", isHtml: true },
+            { num: 150, text: "➜  Shell: /bin/bash", type: "info" },
+            { num: 152, text: "email=koxipev@cambrigeuni.edu.pl", type: "warning" },
+            { num: 153, text: "password=Satyana@1234", type: "error" },
+            { num: 154, text: "token=mem5iOlKqN5b", type: "warning" },
+            { num: 155, text: "<span class=\"timestamp\">{\"time\":\"2026-07-23T20:55:32.464374107Z\",\"level\":\"INFO\",...}</span>", type: "info", isHtml: true },
+            { num: 156, text: "<span class=\"timestamp\">{\"time\":\"2026-07-23T20:55:34.876092508Z\",\"level\":\"INFO\",...}</span>", type: "success", isHtml: true },
+            { num: 157, text: "<span class=\"ascii-art\">                _</span>", type: "muted", isHtml: true },
+            { num: 158, text: "<span class=\"ascii-art\"> _____ __ ___ | | __</span>", type: "muted", isHtml: true },
+            { num: 159, text: "<span class=\"ascii-art\">|_  / '__/ _ \\| |/ /</span>", type: "muted", isHtml: true },
+            { num: 160, text: "<span class=\"ascii-art\"> / /| | | (_) |   <</span>", type: "muted", isHtml: true },
+            { num: 161, text: "<span class=\"ascii-art\">/___|_|  \\___/|_|\\_\\</span>", type: "muted", isHtml: true },
+            { num: 163, text: "v2.0.4 [6ff92039]", type: "info" },
+            { num: 165, text: "8080 -> <a href=\"https://x0akbm27vpnc.shares.zrok.io\" class=\"url\" target=\"_blank\">https://x0akbm27vpnc.shares.zrok.io</a>", type: "success", isHtml: true },
+            { num: 166, text: "8787 -> <a href=\"https://6m3h7yts5x5p.shares.zrok.io\" class=\"url\" target=\"_blank\">https://6m3h7yts5x5p.shares.zrok.io</a>", type: "success", isHtml: true },
+            { num: 167, text: "5555 -> <a href=\"https://aouvcxzccu6n.shares.zrok.io\" class=\"url\" target=\"_blank\">https://aouvcxzccu6n.shares.zrok.io</a>", type: "success", isHtml: true },
+            { num: 168, text: "5000 -> <a href=\"https://mqrm35i7px2i.shares.zrok.io\" class=\"url\" target=\"_blank\">https://mqrm35i7px2i.shares.zrok.io</a>", type: "success", isHtml: true },
+            { num: 169, text: "38631 -> <a href=\"https://m0xam4c1o2a7.shares.zrok.io\" class=\"url\" target=\"_blank\">https://m0xam4c1o2a7.shares.zrok.io</a>", type: "success", isHtml: true }
+        ];
+
+        const logContent = document.getElementById('logContent');
+
+        logData.forEach(log => {
+            const logLine = document.createElement('div');
+            logLine.className = 'log-line';
+
+            const lineNum = document.createElement('span');
+            lineNum.className = 'line-number';
+            lineNum.textContent = log.num;
+
+            const logText = document.createElement('span');
+            logText.className = `log-text ${log.type}`;
+            
+            if (log.isHtml) {
+                logText.innerHTML = log.text;
+            } else {
+                logText.textContent = log.text;
+            }
+
+            logLine.appendChild(lineNum);
+            logLine.appendChild(logText);
+            logContent.appendChild(logLine);
+        });
+    </script>
+</body>
+</html>
