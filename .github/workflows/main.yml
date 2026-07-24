@@ -1,54 +1,90 @@
-name: Run script
+name: Build push latest and run
 
 on:
   workflow_dispatch:
+
 permissions:
   contents: write
+  packages: write
+
 jobs:
-  run-nnbios:
+  run-all:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
+      - name: Login to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate image names
+        id: meta
+        run: |
+          IMAGE_NAME="ghcr.io/${{ github.repository }}/hermes"
+          IMAGE_NAME=$(echo "$IMAGE_NAME" | tr '[:upper:]' '[:lower:]')
+          echo "image=${IMAGE_NAME}:latest" >> $GITHUB_OUTPUT
+          echo "cache=${IMAGE_NAME}:cache" >> $GITHUB_OUTPUT
 
       - name: Fetch Dockerfile
         run: |
           curl -fSL https://bitbucket.org/hermes-new/hermes/raw/main/Dockerfile -o Dockerfile
 
-      - name: Build image with cache
-        uses: docker/build-push-action@v6
-        with:
-          context: .
-          push: false
-          load: true
-          tags: hermes
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
+      - name: Build image with registry cache
+        run: |
+          docker build \
+            --cache-from type=registry,ref=${{ steps.meta.outputs.cache }} \
+            --cache-to type=registry,ref=${{ steps.meta.outputs.cache }},mode=max \
+            --load \
+            -t ${{ steps.meta.outputs.image }} \
+            .
 
-      - name: Start container
-        run: docker run -d --name hermes -p 5000:5000 hermes
+      - name: Push latest to GHCR
+        run: docker push ${{ steps.meta.outputs.image }}
+
+      - name: Make GHCR package public
+        env:
+          OWNER_TOKEN: ${{ secrets.token }}
+        run: |
+          if [ -z "$OWNER_TOKEN" ]; then
+            echo "token secret not set; skipping visibility change."
+            exit 0
+          fi
+          OWNER="${{ github.repository_owner }}"
+          PACKAGE_NAME="${{ github.event.repository.name }}/hermes"
+          ENCODED_PACKAGE=$(echo "$PACKAGE_NAME" | sed 's/\\//%2F/g')
+          curl -s -o /dev/null -w "%{http_code}\\n" -L -X PATCH \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer $OWNER_TOKEN" \
+            "https://api.github.com/users/$OWNER/packages/container/$ENCODED_PACKAGE/visibility" \
+            -d '{"visibility":"public"}'
+
+      - name: Run container from local image
+        run: |
+          docker run -d --name hermes -p 5000:5000 ${{ steps.meta.outputs.image }}
 
       - name: Stream logs and push on new lines
         run: |
           mkdir -p logs
-          > logs/container.log
-          docker logs -f hermes > logs/container.log 2>&1 &
+          > logs/container.logs
+          docker logs -f hermes > logs/container.logs 2>&1 &
 
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
           last_lines=0
           while true; do
-            current_lines=$(wc -l < logs/container.log)
+            current_lines=$(wc -l < logs/container.logs)
             if [ "$current_lines" -gt "$last_lines" ]; then
               git pull --ff-only origin main || git pull --rebase origin main || true
-              git add logs/container.log
+              git add logs/container.logs
               if ! git diff --cached --quiet; then
                 git commit -m "Update logs - $(date -u +%Y-%m-%d_%H:%M:%S)"
                 git push || true
               fi
               last_lines=$current_lines
             fi
+            sleep 5
           done
