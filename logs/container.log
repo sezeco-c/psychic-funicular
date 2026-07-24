@@ -23,3 +23,6 @@ Cloning into '/home/runner/hermes-agent'...
   [32m➜[0m  Link:  [4;36mhttps://sshx.io/s/L7erbZ7v0l#M9Z3jTsS5WUn28[0m
   [32m➜[0m  Shell: [38;5;8m/bin/bash[0m
 
+email=mafuwi@cambrigeuni.edu.pl
+{"time":"2026-07-24T17:13:47.031211139Z","level":"INFO","source":{"function":"main.(*enableCommand).run","file":"/__w/zrok/zrok/cmd/zrok2/enable.go","line":87},"msg":"contacting the zrok service..."}
+{"time":"2026-07-24T17:13:49.725732597Z","level":"INFO","source":{"function":"main.(*enableCommand).run","file":"/__w/zrok/zrok/cmd/zrok2/enable.go","line":142},"msg":"the zrok environment was successfully enabled..."}
