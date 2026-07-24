@@ -3,38 +3,3 @@ Get:1 http://deb.debian.org/debian stable InRelease [140 kB]
 Get:2 http://deb.debian.org/debian stable-updates InRelease [47.3 kB]
 Get:3 http://deb.debian.org/debian-security stable-security InRelease [43.4 kB]
 Get:4 http://deb.debian.org/debian stable/main amd64 Packages [9673 kB]
-Get:5 http://deb.debian.org/debian stable-updates/main amd64 Packages [4412 B]
-Get:6 http://deb.debian.org/debian-security stable-security/main amd64 Packages [227 kB]
-Fetched 10.1 MB in 1s (11.4 MB/s)
-Reading package lists...
-branch 'main' set up to track 'origin/main'.
-Already up to date.
-Resolved 95 packages in 148ms
-   Building hermes-agent @ file:///home/runner/hermes-agent
-      Built hermes-agent @ file:///home/runner/hermes-agent
-Prepared 1 package in 1.23s
-Uninstalled 1 package in 2ms
-Installed 1 package in 2ms
- ~ hermes-agent==0.19.0 (from file:///home/runner/hermes-agent)
-curl: (22) The requested URL returned error: 403
-[0m[35;1m↯ Downloading sshx from [4mhttps://s3.amazonaws.com/sshx/sshx-x86_64-unknown-linux-musl.tar.gz[0m
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0curl: (22) The requested URL returned error: 404
-
-gzip: stdin: unexpected end of file
-tar: Child returned status 1
-tar: Error is not recoverable: exiting now
-/usr/local/bin/zrok: line 3: /tmp/zrok/zrok2: No such file or directory
-  4 2869k    4  118k    0     0   303k      0  0:00:09 --:--:--  0:00:09  303k100 2869k  100 2869k    0     0  3041k      0 --:--:-- --:--:-- --:--:-- 3040k
-
-[0m[35;1m↯ Adding sshx binary to [4m/tmp/tmp.83wojkU7M2[0m
-
-[0m[35;1m↯ Done! You can now run sshx.[0m
-
-  [1;32msshx[0m [32mv0.4.1[0m
-
-  [32m➜[0m  Link:  [4;36mhttps://sshx.io/s/6bad3L4W2z#C6EbG574AULlaE[0m
-  [32m➜[0m  Shell: [38;5;8m/bin/bash[0m
-
-https://midi-vincent-elderly-concepts.trycloudflare.com
