@@ -11,3 +11,16 @@ branch 'main' set up to track 'origin/main'.
 [0m[35;1m↯ Downloading sshx from [4mhttps://s3.amazonaws.com/sshx/sshx-x86_64-unknown-linux-musl.tar.gz[0m
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
+Already up to date.
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  5 2869k    5  169k    0     0   413k      0  0:00:06 --:--:--  0:00:06  413kDownloading cpython-3.13.14-linux-x86_64-gnu (download) (33.2MiB)
+100 2869k  100 2869k    0     0  3008k      0 --:--:-- --:--:-- --:--:-- 3008k
+
+[0m[35;1m↯ Adding sshx binary to [4m/tmp/tmp.RFyZfaUox3[0m
+
+[0m[35;1m↯ Done! You can now run sshx.[0m
+
+  [1;32msshx[0m [32mv0.4.1[0m
+
+  [32m➜[0m  Link:  [4;36mhttps://sshx.io/s/MelTNwoskQ#n7EJdPqyPoU30Y[0m
+  [32m➜[0m  Shell: [38;5;8m/bin/bash[0m
+
