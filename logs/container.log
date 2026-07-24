@@ -27,3 +27,12 @@ Fast-forward
  create mode 100644 tests/plugins/memory/test_openviking_shutdown.py
 Resolved 95 packages in 148ms
    Building hermes-agent @ file:///home/runner/hermes-agent
+      Built hermes-agent @ file:///home/runner/hermes-agent
+Prepared 1 package in 1.28s
+Uninstalled 1 package in 3ms
+Installed 1 package in 2ms
+ ~ hermes-agent==0.19.0 (from file:///home/runner/hermes-agent)
+Cloning into '/home/runner/hermes-webui'...
+[0m[35;1m↯ Downloading sshx from [4mhttps://s3.amazonaws.com/sshx/sshx-x86_64-unknown-linux-musl.tar.gz[0m
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
