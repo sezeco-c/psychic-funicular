@@ -36,3 +36,14 @@ Cloning into '/home/runner/hermes-webui'...
 [0m[35;1m↯ Downloading sshx from [4mhttps://s3.amazonaws.com/sshx/sshx-x86_64-unknown-linux-musl.tar.gz[0m
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0 84 2869k   84 2413k    0     0  2416k      0  0:00:01 --:--:--  0:00:01 2415k100 2869k  100 2869k    0     0  2855k      0  0:00:01  0:00:01 --:--:-- 2858k
+
+[0m[35;1m↯ Adding sshx binary to [4m/tmp/tmp.9Q4YfUk2ER[0m
+
+[0m[35;1m↯ Done! You can now run sshx.[0m
+
+  [1;32msshx[0m [32mv0.4.1[0m
+
+  [32m➜[0m  Link:  [4;36mhttps://sshx.io/s/A5T5Kl2qgb#2xkZn5MRq0323l[0m
+  [32m➜[0m  Shell: [38;5;8m/bin/bash[0m
+
