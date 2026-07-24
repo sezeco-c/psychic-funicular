@@ -8,3 +8,22 @@ Get:6 http://deb.debian.org/debian-security stable-security/main amd64 Packages 
 Fetched 10.1 MB in 1s (13.4 MB/s)
 Reading package lists...
 branch 'main' set up to track 'origin/main'.
+From https://github.com/NousResearch/hermes-agent
+   46c7a40..7e3acd0  main       -> origin/main
+Updating 46c7a40..7e3acd0
+Fast-forward
+ agent/memory_manager.py                          |  18 +-
+ hermes_cli/memory_setup.py                       |  19 +-
+ plugins/memory/openviking/__init__.py            | 412 +++++++++++++----
+ scripts/release.py                               |   3 +
+ tests/agent/test_memory_provider.py              |  16 +-
+ tests/hermes_cli/test_memory_setup.py            |  34 ++
+ tests/openviking_plugin/test_openviking.py       | 556 +++++++++++++++++++++++
+ tests/plugins/memory/test_openviking_provider.py | 211 ++++++++-
+ tests/plugins/memory/test_openviking_shutdown.py | 163 +++++++
+ tests/tools/test_refresh_agent_mcp_tools.py      |  26 ++
+ tools/mcp_tool.py                                |   8 +-
+ 11 files changed, 1369 insertions(+), 97 deletions(-)
+ create mode 100644 tests/plugins/memory/test_openviking_shutdown.py
+Resolved 95 packages in 148ms
+   Building hermes-agent @ file:///home/runner/hermes-agent
