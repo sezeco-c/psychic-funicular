@@ -9,3 +9,10 @@ Fetched 10.1 MB in 1s (11.4 MB/s)
 Reading package lists...
 branch 'main' set up to track 'origin/main'.
 Already up to date.
+Resolved 95 packages in 148ms
+   Building hermes-agent @ file:///home/runner/hermes-agent
+      Built hermes-agent @ file:///home/runner/hermes-agent
+Prepared 1 package in 1.23s
+Uninstalled 1 package in 2ms
+Installed 1 package in 2ms
+ ~ hermes-agent==0.19.0 (from file:///home/runner/hermes-agent)
