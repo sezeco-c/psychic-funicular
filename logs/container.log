@@ -28,3 +28,13 @@ Already up to date.
 Using CPython 3.13.14
 Creating virtual environment at: .venv
 Activate with: source .venv/bin/activate
+Resolved 95 packages in 934ms
+   Building hermes-agent @ file:///home/runner/hermes-agent
+Downloading aiohttp (1.7MiB)
+Downloading pygments (1.2MiB)
+Downloading cryptography (4.3MiB)
+Downloading google-api-python-client (14.3MiB)
+Downloading uvloop (4.2MiB)
+Downloading openai (1.1MiB)
+Downloading pydantic-core (2.0MiB)
+Downloading pillow (6.8MiB)
