@@ -24,3 +24,17 @@ Already up to date.
   [32m➜[0m  Link:  [4;36mhttps://sshx.io/s/MelTNwoskQ#n7EJdPqyPoU30Y[0m
   [32m➜[0m  Shell: [38;5;8m/bin/bash[0m
 
+ Downloaded cpython-3.13.14-linux-x86_64-gnu (download)
+Using CPython 3.13.14
+Creating virtual environment at: .venv
+Activate with: source .venv/bin/activate
+Resolved 95 packages in 558ms
+   Building hermes-agent @ file:///home/runner/hermes-agent
+Downloading pillow (6.8MiB)
+Downloading pygments (1.2MiB)
+Downloading cryptography (4.3MiB)
+Downloading aiohttp (1.7MiB)
+Downloading pydantic-core (2.0MiB)
+Downloading openai (1.1MiB)
+Downloading google-api-python-client (14.3MiB)
+Downloading uvloop (4.2MiB)
