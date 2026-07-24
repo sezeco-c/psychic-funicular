@@ -5,164 +5,5 @@ Get:3 http://deb.debian.org/debian-security stable-security InRelease [43.4 kB]
 Get:4 http://deb.debian.org/debian stable/main amd64 Packages [9673 kB]
 Get:5 http://deb.debian.org/debian stable-updates/main amd64 Packages [4412 B]
 Get:6 http://deb.debian.org/debian-security stable-security/main amd64 Packages [227 kB]
-Fetched 10.1 MB in 1s (12.9 MB/s)
+Fetched 10.1 MB in 1s (10.6 MB/s)
 Reading package lists...
-branch 'main' set up to track 'origin/main'.
-Cloning into '/home/runner/hermes-agent'...
-[0m[35;1m↯ Downloading sshx from [4mhttps://s3.amazonaws.com/sshx/sshx-x86_64-unknown-linux-musl.tar.gz[0m
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  7 2869k    7  203k    0     0   428k      0  0:00:06 --:--:--  0:00:06  427k100 2869k  100 2869k    0     0  2979k      0 --:--:-- --:--:-- --:--:-- 2976k
-
-[0m[35;1m↯ Adding sshx binary to [4m/tmp/tmp.tx06walVqS[0m
-
-[0m[35;1m↯ Done! You can now run sshx.[0m
-
-  [1;32msshx[0m [32mv0.4.1[0m
-
-  [32m➜[0m  Link:  [4;36mhttps://sshx.io/s/BpUUdUiscR#n4UelbfIUlqI05[0m
-  [32m➜[0m  Shell: [38;5;8m/bin/bash[0m
-
-email=pebutam@cambrigeuni.edu.pl
-{"time":"2026-07-24T11:35:38.347502064Z","level":"INFO","source":{"function":"main.(*enableCommand).run","file":"/__w/zrok/zrok/cmd/zrok2/enable.go","line":87},"msg":"contacting the zrok service..."}
-Updating files:   0% (2/7303)Updating files:   1% (74/7303)Updating files:   2% (147/7303)Updating files:   3% (220/7303)Updating files:   4% (293/7303)Updating files:   5% (366/7303)Updating files:   6% (439/7303)Updating files:   7% (512/7303)Updating files:   8% (585/7303)Updating files:   9% (658/7303)Updating files:  10% (731/7303)Updating files:  11% (804/7303)Updating files:  12% (877/7303)Updating files:  13% (950/7303)Updating files:  14% (1023/7303)Updating files:  15% (1096/7303)Updating files:  16% (1169/7303)Updating files:  17% (1242/7303)Updating files:  18% (1315/7303)Updating files:  19% (1388/7303)Updating files:  20% (1461/7303)Updating files:  21% (1534/7303)Updating files:  22% (1607/7303)Updating files:  23% (1680/7303)Updating files:  24% (1753/7303)Updating files:  25% (1826/7303)Updating files:  26% (1899/7303)Updating files:  27% (1972/7303)Updating files:  28% (2045/7303)Updating files:  29% (2118/7303)Updating files:  30% (2191/7303)Updating files:  31% (2264/7303)Updating files:  32% (2337/7303)Updating files:  33% (2410/7303)Updating files:  34% (2484/7303)Updating files:  35% (2557/7303)Updating files:  36% (2630/7303)Updating files:  37% (2703/7303)Updating files:  38% (2776/7303)Updating files:  39% (2849/7303)Updating files:  40% (2922/7303)Updating files:  41% (2995/7303)Updating files:  42% (3068/7303)Updating files:  43% (3141/7303)Updating files:  44% (3214/7303)Updating files:  45% (3287/7303)Updating files:  46% (3360/7303)Updating files:  47% (3433/7303)Updating files:  48% (3506/7303)Updating files:  49% (3579/7303)Updating files:  50% (3652/7303)Updating files:  51% (3725/7303)Updating files:  52% (3798/7303)Updating files:  53% (3871/7303)Updating files:  54% (3944/7303)Updating files:  55% (4017/7303)Updating files:  56% (4090/7303)Updating files:  57% (4163/7303)Updating files:  58% (4236/7303)Updating files:  59% (4309/7303)Updating files:  60% (4382/7303)Updating files:  61% (4455/7303)Updating files:  62% (4528/7303)Updating files:  63% (4601/7303)Updating files:  64% (4674/7303)Updating files:  65% (4747/7303)Updating files:  66% (4820/7303)Updating files:  67% (4894/7303)Updating files:  68% (4967/7303)Updating files:  69% (5040/7303)Updating files:  70% (5113/7303)Updating files:  71% (5186/7303)Updating files:  72% (5259/7303)Updating files:  73% (5332/7303)Updating files:  74% (5405/7303)Updating files:  75% (5478/7303)Updating files:  76% (5551/7303)Updating files:  77% (5624/7303)Updating files:  78% (5697/7303)Updating files:  79% (5770/7303)Updating files:  80% (5843/7303)Updating files:  81% (5916/7303)Updating files:  82% (5989/7303)Updating files:  83% (6062/7303)Updating files:  84% (6135/7303)Updating files:  85% (6208/7303)Updating files:  86% (6281/7303)Updating files:  87% (6354/7303)Updating files:  88% (6427/7303)Updating files:  89% (6500/7303)Updating files:  90% (6573/7303)Updating files:  91% (6646/7303)Updating files:  92% (6719/7303)Updating files:  93% (6792/7303)Updating files:  94% (6865/7303)Updating files:  95% (6938/7303)Updating files:  96% (7011/7303)Updating files:  97% (7084/7303)Updating files:  98% (7157/7303)Updating files:  99% (7230/7303)Updating files: 100% (7303/7303)Updating files: 100% (7303/7303), done.
-
-real	0m12.568s
-user	0m2.857s
-sys	0m1.498s
-Downloading cpython-3.13.14-linux-x86_64-gnu (download) (33.2MiB)
-{"time":"2026-07-24T11:35:41.894544373Z","level":"INFO","source":{"function":"main.(*enableCommand).run","file":"/__w/zrok/zrok/cmd/zrok2/enable.go","line":142},"msg":"the zrok environment was successfully enabled..."}
- Downloaded cpython-3.13.14-linux-x86_64-gnu (download)
-Using CPython 3.13.14
-Creating virtual environment at: .venv
-Activate with: source .venv/bin/activate
-               _    
- _____ __ ___ | | __
-|_  / '__/ _ \| |/ /
- / /| | | (_) |   < 
-/___|_|  \___/|_|\_\
-
-v2.0.4 [6ff92039]
-
-Resolved 95 packages in 495ms
-   Building hermes-agent @ file:///home/runner/hermes-agent
-Downloading aiohttp (1.7MiB)
-Downloading uvloop (4.2MiB)
-Downloading cryptography (4.3MiB)
-Downloading pillow (6.8MiB)
-Downloading google-api-python-client (14.3MiB)
-Downloading pydantic-core (2.0MiB)
-Downloading pygments (1.2MiB)
-Downloading openai (1.1MiB)
- Downloaded pydantic-core
- Downloaded aiohttp
- Downloaded uvloop
- Downloaded pillow
- Downloaded cryptography
- Downloaded pygments
- Downloaded google-api-python-client
- Downloaded openai
-      Built hermes-agent @ file:///home/runner/hermes-agent
-Prepared 83 packages in 2.58s
-Installed 95 packages in 136ms
- + agent-client-protocol==0.9.0
- + aiohappyeyeballs==2.7.1
- + aiohttp==3.14.1
- + aiosignal==1.4.0
- + annotated-doc==0.0.4
- + annotated-types==0.8.0
- + anyio==4.14.2
- + attrs==26.1.0
- + certifi==2026.5.20
- + cffi==2.1.0
- + charset-normalizer==3.4.9
- + click==8.4.2
- + croniter==6.0.0
- + cryptography==46.0.7
- + defusedxml==0.7.1
- + distro==1.9.0
- + fastapi==0.133.1
- + fire==0.7.1
- + frozenlist==1.8.0
- + google-api-core==2.33.0
- + google-api-python-client==2.194.0
- + google-auth==2.56.2
- + google-auth-httplib2==0.3.1
- + google-auth-oauthlib==1.3.1
- + googleapis-common-protos==1.75.0
- + h11==0.16.0
- + hermes-agent==0.19.0 (from file:///home/runner/hermes-agent)
- + httpcore==1.0.9
- + httplib2==0.32.0
- + httptools==0.8.0
- + httpx==0.28.1
- + httpx-sse==0.4.3
- + idna==3.18
- + jinja2==3.1.6
- + jiter==0.16.0
- + jsonschema==4.26.0
- + jsonschema-specifications==2025.9.1
- + markdown==3.10.2
- + markdown-it-py==4.2.0
- + markupsafe==3.0.3
- + mcp==1.26.0
- + mdurl==0.1.2
- + multidict==6.7.1
- + oauthlib==3.3.1
- + openai==2.24.0
- + packaging==26.0
- + pathspec==1.1.1
- + pillow==12.2.0
- + prompt-toolkit==3.0.52
- + propcache==0.5.2
- + proto-plus==1.28.2
- + protobuf==7.35.1
- + psutil==7.2.2
- + ptyprocess==0.7.0
- + pyasn1==0.6.4
- + pyasn1-modules==0.4.2
- + pycparser==3.0
- + pydantic==2.13.4
- + pydantic-core==2.46.4
- + pydantic-settings==2.14.2
- + pygments==2.20.0
- + pyjwt==2.13.0
- + pyparsing==3.3.2
- + python-dateutil==2.9.0.post0
- + python-dotenv==1.2.2
- + python-multipart==0.0.27
- + pytz==2026.2
- + pyyaml==6.0.3
- + referencing==0.37.0
- + requests==2.33.0
- + requests-oauthlib==2.0.0
- + rich==14.3.3
- + rpds-py==2026.6.3
- + ruamel-yaml==0.18.17
- + ruamel-yaml-clib==0.2.15
- + simple-term-menu==1.6.6
- + six==1.17.0
- + sniffio==1.3.1
- + socksio==1.0.0
- + sse-starlette==3.4.6
- + starlette==1.0.1
- + tenacity==9.1.4
- + termcolor==3.3.0
- + tqdm==4.69.0
- + typing-extensions==4.16.0
- + typing-inspection==0.4.2
- + uritemplate==4.2.0
- + urllib3==2.7.0
- + uvicorn==0.41.0
- + uvloop==0.22.1
- + watchfiles==1.2.0
- + wcwidth==0.8.2
- + websockets==15.0.1
- + yarl==1.24.5
- + youtube-transcript-api==1.2.4
-/home/runner/workspace/scripts/hermes.sh: line 56: docker: command not found
-8080 -> https://ecdkohua0lrx.shares.zrok.io
-8787 -> https://3pwqsmpw3vso.shares.zrok.io
-5555 -> https://aayygnmp0hh6.shares.zrok.io
-5000 -> https://gyn0loen68tp.shares.zrok.io
-38631 -> https://m9cqldc0h97e.shares.zrok.io
