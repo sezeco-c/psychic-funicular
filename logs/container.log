@@ -9,3 +9,143 @@ Fetched 10.1 MB in 1s (13.1 MB/s)
 Reading package lists...
 branch 'main' set up to track 'origin/main'.
 Cloning into '/home/runner/hermes-agent'...
+Updating files:   0% (2/7295)Updating files:   1% (73/7295)Updating files:   2% (146/7295)Updating files:   3% (219/7295)Updating files:   4% (292/7295)Updating files:   5% (365/7295)Updating files:   6% (438/7295)Updating files:   7% (511/7295)Updating files:   8% (584/7295)Updating files:   9% (657/7295)Updating files:  10% (730/7295)Updating files:  11% (803/7295)Updating files:  12% (876/7295)Updating files:  13% (949/7295)Updating files:  14% (1022/7295)Updating files:  15% (1095/7295)Updating files:  16% (1168/7295)Updating files:  17% (1241/7295)Updating files:  18% (1314/7295)Updating files:  19% (1387/7295)Updating files:  20% (1459/7295)Updating files:  21% (1532/7295)Updating files:  22% (1605/7295)Updating files:  23% (1678/7295)Updating files:  24% (1751/7295)Updating files:  25% (1824/7295)Updating files:  26% (1897/7295)Updating files:  27% (1970/7295)Updating files:  28% (2043/7295)Updating files:  29% (2116/7295)Updating files:  30% (2189/7295)Updating files:  31% (2262/7295)Updating files:  31% (2308/7295)Updating files:  32% (2335/7295)Updating files:  33% (2408/7295)Updating files:  34% (2481/7295)Updating files:  35% (2554/7295)Updating files:  36% (2627/7295)Updating files:  37% (2700/7295)Updating files:  38% (2773/7295)Updating files:  39% (2846/7295)Updating files:  40% (2918/7295)Updating files:  41% (2991/7295)Updating files:  42% (3064/7295)Updating files:  43% (3137/7295)Updating files:  44% (3210/7295)Updating files:  45% (3283/7295)Updating files:  46% (3356/7295)Updating files:  47% (3429/7295)Updating files:  48% (3502/7295)Updating files:  49% (3575/7295)Updating files:  50% (3648/7295)Updating files:  51% (3721/7295)Updating files:  52% (3794/7295)Updating files:  53% (3867/7295)Updating files:  54% (3940/7295)Updating files:  55% (4013/7295)Updating files:  56% (4086/7295)Updating files:  57% (4159/7295)Updating files:  58% (4232/7295)Updating files:  59% (4305/7295)Updating files:  60% (4377/7295)Updating files:  61% (4450/7295)Updating files:  62% (4523/7295)Updating files:  63% (4596/7295)Updating files:  64% (4669/7295)Updating files:  65% (4742/7295)Updating files:  66% (4815/7295)Updating files:  67% (4888/7295)Updating files:  68% (4961/7295)Updating files:  69% (5034/7295)Updating files:  70% (5107/7295)Updating files:  71% (5180/7295)Updating files:  72% (5253/7295)Updating files:  73% (5326/7295)Updating files:  74% (5399/7295)Updating files:  75% (5472/7295)Updating files:  76% (5545/7295)Updating files:  77% (5618/7295)Updating files:  78% (5691/7295)Updating files:  79% (5764/7295)Updating files:  80% (5836/7295)Updating files:  81% (5909/7295)Updating files:  82% (5982/7295)Updating files:  83% (6055/7295)Updating files:  84% (6128/7295)Updating files:  85% (6201/7295)Updating files:  86% (6274/7295)Updating files:  87% (6347/7295)Updating files:  88% (6420/7295)Updating files:  89% (6493/7295)Updating files:  90% (6566/7295)Updating files:  91% (6639/7295)Updating files:  92% (6712/7295)Updating files:  93% (6785/7295)Updating files:  94% (6858/7295)Updating files:  95% (6931/7295)Updating files:  96% (7004/7295)Updating files:  97% (7077/7295)Updating files:  98% (7150/7295)Updating files:  99% (7223/7295)Updating files: 100% (7295/7295)Updating files: 100% (7295/7295), done.
+
+real	0m9.211s
+user	0m2.350s
+sys	0m1.068s
+Downloading cpython-3.13.14-linux-x86_64-gnu (download) (33.2MiB)
+ Downloaded cpython-3.13.14-linux-x86_64-gnu (download)
+Using CPython 3.13.14
+Creating virtual environment at: .venv
+Activate with: source .venv/bin/activate
+Resolved 95 packages in 651ms
+   Building hermes-agent @ file:///home/runner/hermes-agent
+Downloading pydantic-core (2.0MiB)
+Downloading pygments (1.2MiB)
+Downloading google-api-python-client (14.3MiB)
+Downloading aiohttp (1.7MiB)
+Downloading cryptography (4.3MiB)
+Downloading uvloop (4.2MiB)
+Downloading pillow (6.8MiB)
+Downloading openai (1.1MiB)
+ Downloaded pydantic-core
+ Downloaded aiohttp
+ Downloaded uvloop
+ Downloaded pillow
+ Downloaded cryptography
+ Downloaded pygments
+ Downloaded google-api-python-client
+ Downloaded openai
+      Built hermes-agent @ file:///home/runner/hermes-agent
+Prepared 95 packages in 2.30s
+Installed 95 packages in 107ms
+ + agent-client-protocol==0.9.0
+ + aiohappyeyeballs==2.7.1
+ + aiohttp==3.14.1
+ + aiosignal==1.4.0
+ + annotated-doc==0.0.4
+ + annotated-types==0.8.0
+ + anyio==4.14.2
+ + attrs==26.1.0
+ + certifi==2026.5.20
+ + cffi==2.1.0
+ + charset-normalizer==3.4.9
+ + click==8.4.2
+ + croniter==6.0.0
+ + cryptography==46.0.7
+ + defusedxml==0.7.1
+ + distro==1.9.0
+ + fastapi==0.133.1
+ + fire==0.7.1
+ + frozenlist==1.8.0
+ + google-api-core==2.33.0
+ + google-api-python-client==2.194.0
+ + google-auth==2.56.2
+ + google-auth-httplib2==0.3.1
+ + google-auth-oauthlib==1.3.1
+ + googleapis-common-protos==1.75.0
+ + h11==0.16.0
+ + hermes-agent==0.19.0 (from file:///home/runner/hermes-agent)
+ + httpcore==1.0.9
+ + httplib2==0.32.0
+ + httptools==0.8.0
+ + httpx==0.28.1
+ + httpx-sse==0.4.3
+ + idna==3.18
+ + jinja2==3.1.6
+ + jiter==0.16.0
+ + jsonschema==4.26.0
+ + jsonschema-specifications==2025.9.1
+ + markdown==3.10.2
+ + markdown-it-py==4.2.0
+ + markupsafe==3.0.3
+ + mcp==1.26.0
+ + mdurl==0.1.2
+ + multidict==6.7.1
+ + oauthlib==3.3.1
+ + openai==2.24.0
+ + packaging==26.0
+ + pathspec==1.1.1
+ + pillow==12.2.0
+ + prompt-toolkit==3.0.52
+ + propcache==0.5.2
+ + proto-plus==1.28.2
+ + protobuf==7.35.1
+ + psutil==7.2.2
+ + ptyprocess==0.7.0
+ + pyasn1==0.6.4
+ + pyasn1-modules==0.4.2
+ + pycparser==3.0
+ + pydantic==2.13.4
+ + pydantic-core==2.46.4
+ + pydantic-settings==2.14.2
+ + pygments==2.20.0
+ + pyjwt==2.13.0
+ + pyparsing==3.3.2
+ + python-dateutil==2.9.0.post0
+ + python-dotenv==1.2.2
+ + python-multipart==0.0.27
+ + pytz==2026.2
+ + pyyaml==6.0.3
+ + referencing==0.37.0
+ + requests==2.33.0
+ + requests-oauthlib==2.0.0
+ + rich==14.3.3
+ + rpds-py==2026.6.3
+ + ruamel-yaml==0.18.17
+ + ruamel-yaml-clib==0.2.15
+ + simple-term-menu==1.6.6
+ + six==1.17.0
+ + sniffio==1.3.1
+ + socksio==1.0.0
+ + sse-starlette==3.4.6
+ + starlette==1.0.1
+ + tenacity==9.1.4
+ + termcolor==3.3.0
+ + tqdm==4.69.0
+ + typing-extensions==4.16.0
+ + typing-inspection==0.4.2
+ + uritemplate==4.2.0
+ + urllib3==2.7.0
+ + uvicorn==0.41.0
+ + uvloop==0.22.1
+ + watchfiles==1.2.0
+ + wcwidth==0.8.2
+ + websockets==15.0.1
+ + yarl==1.24.5
+ + youtube-transcript-api==1.2.4
+[0m[35;1m↯ Downloading sshx from [4mhttps://s3.amazonaws.com/sshx/sshx-x86_64-unknown-linux-musl.tar.gz[0m
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  5 2869k    5  169k    0     0   378k      0  0:00:07 --:--:--  0:00:07  378k100 2869k  100 2869k    0     0  2573k      0  0:00:01  0:00:01 --:--:-- 2573k
+
+[0m[35;1m↯ Adding sshx binary to [4m/tmp/tmp.uSPnNoxrf3[0m
+
+[0m[35;1m↯ Done! You can now run sshx.[0m
+
+  [1;32msshx[0m [32mv0.4.1[0m
+
+  [32m➜[0m  Link:  [4;36mhttps://sshx.io/s/fhD6PHywZk#YHgw6JQw4zeQl9[0m
+  [32m➜[0m  Shell: [38;5;8m/bin/bash[0m
+
