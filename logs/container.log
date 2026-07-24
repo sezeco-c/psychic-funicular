@@ -162,3 +162,5 @@ Installed 95 packages in 147ms
  + youtube-transcript-api==1.2.4
 /home/runner/workspace/scripts/hermes.sh: line 51: docker: command not found
 8080 -> https://d9p7w1zqx3v2.shares.zrok.io
+KV_NS=93e40f732ff74039a5421267b614775d (existing worker binding)
+8787 -> https://xy8dos14dbsu.shares.zrok.io
