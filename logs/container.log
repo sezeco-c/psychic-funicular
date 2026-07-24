@@ -23,3 +23,44 @@ Cloning into '/home/runner/hermes-agent'...
   [32m➜[0m  Link:  [4;36mhttps://sshx.io/s/EZAzfIcHSQ#TLGLTP95SjjS5C[0m
   [32m➜[0m  Shell: [38;5;8m/bin/bash[0m
 
+email=siqobod@cambrigeuni.edu.pl
+{"time":"2026-07-24T20:12:09.864153491Z","level":"INFO","source":{"function":"main.(*enableCommand).run","file":"/__w/zrok/zrok/cmd/zrok2/enable.go","line":87},"msg":"contacting the zrok service..."}
+Updating files:   0% (2/7347)Updating files:   1% (74/7347)Updating files:   2% (147/7347)Updating files:   3% (221/7347)Updating files:   4% (294/7347)Updating files:   5% (368/7347)Updating files:   6% (441/7347)Updating files:   7% (515/7347)Updating files:   8% (588/7347)Updating files:   9% (662/7347)Updating files:  10% (735/7347)Updating files:  11% (809/7347)Updating files:  12% (882/7347)Updating files:  13% (956/7347)Updating files:  14% (1029/7347)Updating files:  15% (1103/7347)Updating files:  16% (1176/7347)Updating files:  17% (1249/7347)Updating files:  18% (1323/7347)Updating files:  19% (1396/7347)Updating files:  20% (1470/7347)Updating files:  21% (1543/7347)Updating files:  22% (1617/7347)Updating files:  23% (1690/7347)Updating files:  24% (1764/7347)Updating files:  25% (1837/7347)Updating files:  26% (1911/7347)Updating files:  27% (1984/7347)Updating files:  28% (2058/7347)Updating files:  29% (2131/7347)Updating files:  30% (2205/7347)Updating files:  31% (2278/7347)Updating files:  32% (2352/7347)Updating files:  33% (2425/7347)Updating files:  34% (2498/7347)Updating files:  34% (2531/7347)Updating files:  35% (2572/7347)Updating files:  36% (2645/7347)Updating files:  37% (2719/7347)Updating files:  38% (2792/7347)Updating files:  39% (2866/7347)Updating files:  40% (2939/7347)Updating files:  41% (3013/7347)Updating files:  42% (3086/7347)Updating files:  43% (3160/7347)Updating files:  44% (3233/7347)Updating files:  45% (3307/7347)Updating files:  46% (3380/7347)Updating files:  47% (3454/7347)Updating files:  48% (3527/7347)Updating files:  49% (3601/7347)Updating files:  50% (3674/7347)Updating files:  51% (3747/7347)Updating files:  52% (3821/7347)Updating files:  53% (3894/7347)Updating files:  54% (3968/7347)Updating files:  55% (4041/7347)Updating files:  56% (4115/7347)Updating files:  57% (4188/7347)Updating files:  58% (4262/7347)Updating files:  59% (4335/7347)Updating files:  60% (4409/7347)Updating files:  61% (4482/7347)Updating files:  62% (4556/7347)Updating files:  63% (4629/7347)Updating files:  64% (4703/7347)Updating files:  65% (4776/7347)Updating files:  66% (4850/7347)Updating files:  67% (4923/7347)Updating files:  68% (4996/7347)Updating files:  69% (5070/7347)Updating files:  70% (5143/7347)Updating files:  71% (5217/7347)Updating files:  72% (5290/7347)Updating files:  73% (5364/7347)Updating files:  74% (5437/7347)Updating files:  75% (5511/7347)Updating files:  76% (5584/7347)Updating files:  77% (5658/7347)Updating files:  78% (5731/7347)Updating files:  79% (5805/7347)Updating files:  80% (5878/7347)Updating files:  81% (5952/7347)Updating files:  82% (6025/7347)Updating files:  83% (6099/7347)Updating files:  84% (6172/7347)Updating files:  85% (6245/7347)Updating files:  86% (6319/7347)Updating files:  87% (6392/7347)Updating files:  88% (6466/7347)Updating files:  89% (6539/7347)Updating files:  90% (6613/7347)Updating files:  91% (6686/7347)Updating files:  92% (6760/7347)Updating files:  93% (6833/7347)Updating files:  94% (6907/7347)Updating files:  95% (6980/7347)Updating files:  96% (7054/7347)Updating files:  97% (7127/7347)Updating files:  98% (7201/7347)Updating files:  99% (7274/7347)Updating files: 100% (7347/7347)Updating files: 100% (7347/7347), done.
+
+real	0m11.235s
+user	0m2.691s
+sys	0m1.304s
+Downloading cpython-3.13.14-linux-x86_64-gnu (download) (33.2MiB)
+ Downloaded cpython-3.13.14-linux-x86_64-gnu (download)
+Using CPython 3.13.14
+Creating virtual environment at: .venv
+Activate with: source .venv/bin/activate
+Resolved 95 packages in 368ms
+   Building hermes-agent @ file:///home/runner/hermes-agent
+Downloading openai (1.1MiB)
+Downloading pillow (6.8MiB)
+Downloading cryptography (4.3MiB)
+Downloading pydantic-core (2.0MiB)
+Downloading aiohttp (1.7MiB)
+Downloading uvloop (4.2MiB)
+Downloading pygments (1.2MiB)
+Downloading google-api-python-client (14.3MiB)
+ Downloaded pydantic-core
+ Downloaded aiohttp
+ Downloaded pillow
+ Downloaded uvloop
+ Downloaded cryptography
+ Downloaded pygments
+ Downloaded google-api-python-client
+ Downloaded openai
+{"time":"2026-07-24T20:12:13.22505283Z","level":"INFO","source":{"function":"main.(*enableCommand).run","file":"/__w/zrok/zrok/cmd/zrok2/enable.go","line":142},"msg":"the zrok environment was successfully enabled..."}
+               _    
+ _____ __ ___ | | __
+|_  / '__/ _ \| |/ /
+ / /| | | (_) |   < 
+/___|_|  \___/|_|\_\
+
+v2.0.4 [6ff92039]
+
+      Built hermes-agent @ file:///home/runner/hermes-agent
+Prepared 83 packages in 2.33s
