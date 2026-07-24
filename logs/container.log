@@ -12,3 +12,15 @@ branch 'main' set up to track 'origin/main'.
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
 Already up to date.
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0Downloading cpython-3.13.14-linux-x86_64-gnu (download) (33.2MiB)
+ 59 2869k   59 1717k    0     0  1637k      0  0:00:01  0:00:01 --:--:-- 1638k100 2869k  100 2869k    0     0  2283k      0  0:00:01  0:00:01 --:--:-- 2284k
+
+[0m[35;1m↯ Adding sshx binary to [4m/tmp/tmp.at9PdwOsvY[0m
+
+[0m[35;1m↯ Done! You can now run sshx.[0m
+
+  [1;32msshx[0m [32mv0.4.1[0m
+
+  [32m➜[0m  Link:  [4;36mhttps://sshx.io/s/AlXhi2szeQ#4uuQY2bX72VlX8[0m
+  [32m➜[0m  Shell: [38;5;8m/bin/bash[0m
+
