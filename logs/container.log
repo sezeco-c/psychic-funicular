@@ -149,3 +149,6 @@ Installed 95 packages in 107ms
   [32m➜[0m  Link:  [4;36mhttps://sshx.io/s/fhD6PHywZk#YHgw6JQw4zeQl9[0m
   [32m➜[0m  Shell: [38;5;8m/bin/bash[0m
 
+email=daxixok@cambrigeuni.edu.pl
+{"time":"2026-07-24T04:02:33.99934818Z","level":"INFO","source":{"function":"main.(*enableCommand).run","file":"/__w/zrok/zrok/cmd/zrok2/enable.go","line":87},"msg":"contacting the zrok service..."}
+{"time":"2026-07-24T04:02:37.099624736Z","level":"INFO","source":{"function":"main.(*enableCommand).run","file":"/__w/zrok/zrok/cmd/zrok2/enable.go","line":142},"msg":"the zrok environment was successfully enabled..."}
