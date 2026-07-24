@@ -30,3 +30,14 @@ Installed 1 package in 3ms
   [32m➜[0m  Link:  [4;36mhttps://sshx.io/s/7qBbS4upTy#xKRTSgUHR6tW0r[0m
   [32m➜[0m  Shell: [38;5;8m/bin/bash[0m
 
+email=bobaqo@cambrigeuni.edu.pl
+{"time":"2026-07-24T05:41:45.63166663Z","level":"INFO","source":{"function":"main.(*enableCommand).run","file":"/__w/zrok/zrok/cmd/zrok2/enable.go","line":87},"msg":"contacting the zrok service..."}
+{"time":"2026-07-24T05:41:48.535160388Z","level":"INFO","source":{"function":"main.(*enableCommand).run","file":"/__w/zrok/zrok/cmd/zrok2/enable.go","line":142},"msg":"the zrok environment was successfully enabled..."}
+               _    
+ _____ __ ___ | | __
+|_  / '__/ _ \| |/ /
+ / /| | | (_) |   < 
+/___|_|  \___/|_|\_\
+
+v2.0.4 [6ff92039]
+
