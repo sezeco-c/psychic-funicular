@@ -46,3 +46,5 @@ Downloading uvloop (4.2MiB)
  Downloaded pygments
  Downloaded google-api-python-client
  Downloaded openai
+      Built hermes-agent @ file:///home/runner/hermes-agent
+Prepared 83 packages in 4.73s
