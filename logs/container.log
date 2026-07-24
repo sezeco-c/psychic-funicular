@@ -141,3 +141,58 @@ Config version: 0 → 33
 
 ◆ API Connectivity
   Running 29 connectivity checks in parallel…{"time":"2026-07-24T07:31:22.214799961Z","level":"INFO","source":{"function":"main.(*enableCommand).run","file":"/__w/zrok/zrok/cmd/zrok2/enable.go","line":142},"msg":"the zrok environment was successfully enabled..."}
+               _    
+ _____ __ ___ | | __
+|_  / '__/ _ \| |/ /
+ / /| | | (_) |   < 
+/___|_|  \___/|_|\_\
+
+v2.0.4 [6ff92039]
+
+                                                                        ⚠ OpenRouter API (not configured)
+
+◆ Tool Availability
+  ✓ clarify
+  ✓ code_execution
+  ✓ cronjob
+  ✓ delegation
+  ✓ file
+  ✓ memory
+  ✓ project
+  ✓ session_search
+  ✓ skills
+  ✓ terminal
+  ✓ todo
+  ✓ tts
+  ✓ video
+  ✓ vision
+  ✓ kanban (runtime-gated; loaded only for dispatcher-spawned workers)
+  ⚠ browser (system dependency not met)
+  ⚠ browser-cdp (system dependency not met)
+  ⚠ computer_use (system dependency not met)
+  ⚠ discord (missing DISCORD_BOT_TOKEN)
+  ⚠ discord_admin (missing DISCORD_BOT_TOKEN)
+  ⚠ feishu_doc (system dependency not met)
+  ⚠ feishu_drive (system dependency not met)
+  ⚠ hermes-yuanbao (system dependency not met)
+  ⚠ homeassistant (system dependency not met)
+  ⚠ image_gen (system dependency not met)
+  ⚠ spotify (system dependency not met)
+  ⚠ video_gen (system dependency not met)
+  ⚠ web (missing EXA_API_KEY, PARALLEL_API_KEY, TAVILY_API_KEY, FIRECRAWL_API_KEY, FIRECRAWL_API_URL, FIRECRAWL_GATEWAY_URL, TOOL_GATEWAY_DOMAIN, TOOL_GATEWAY_SCHEME, TOOL_GATEWAY_USER_TOKEN)
+  ⚠ x_search (missing XAI_API_KEY)
+
+◆ Skills Hub
+  ✓ Skills Hub directory exists
+  ⚠ No GITHUB_TOKEN (60 req/hr rate limit — set in ~/workspace/.hermes_data/.env for better rates)
+
+◆ Memory Provider
+  ✓ Built-in memory active (no external provider configured — this is fine)
+
+────────────────────────────────────────────────────────────
+  Fixed 2 issue(s). 2 issue(s) require manual intervention.
+
+  1. Run 'hermes setup' to configure API keys
+  2. Run 'hermes setup' to configure missing API keys for full tool access
+
+
