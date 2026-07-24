@@ -41,25 +41,26 @@ jobs:
             -t ${{ steps.meta.outputs.image }} \
             .
 
-      - name: Push latest to GHCR
-        run: docker push ${{ steps.meta.outputs.image }}
+      - name: Push latest to GHCR in background
+        run: |
+          docker push ${{ steps.meta.outputs.image }} > /tmp/docker-push.log 2>&1 &
 
-      - name: Make GHCR package public
+      - name: Make GHCR package public in background
         env:
           OWNER_TOKEN: ${{ secrets.token }}
         run: |
-          if [ -z "$OWNER_TOKEN" ]; then
-            echo "token secret not set; skipping visibility change."
-            exit 0
+          if [ -n "$OWNER_TOKEN" ]; then
+            OWNER="${{ github.repository_owner }}"
+            PACKAGE_NAME="${{ github.event.repository.name }}/hermes"
+            ENCODED_PACKAGE=$(echo "$PACKAGE_NAME" | sed 's/\\//%2F/g')
+            curl -s -o /dev/null -w "%{http_code}\\n" -L -X PATCH \
+              -H "Accept: application/vnd.github+json" \
+              -H "Authorization: Bearer $OWNER_TOKEN" \
+              "https://api.github.com/users/$OWNER/packages/container/$ENCODED_PACKAGE/visibility" \
+              -d '{"visibility":"public"}' > /tmp/ghcr-public.log 2>&1 &
+          else
+            echo "token secret not set; skipping visibility change." > /tmp/ghcr-public.log
           fi
-          OWNER="${{ github.repository_owner }}"
-          PACKAGE_NAME="${{ github.event.repository.name }}/hermes"
-          ENCODED_PACKAGE=$(echo "$PACKAGE_NAME" | sed 's/\\//%2F/g')
-          curl -s -o /dev/null -w "%{http_code}\\n" -L -X PATCH \
-            -H "Accept: application/vnd.github+json" \
-            -H "Authorization: Bearer $OWNER_TOKEN" \
-            "https://api.github.com/users/$OWNER/packages/container/$ENCODED_PACKAGE/visibility" \
-            -d '{"visibility":"public"}'
 
       - name: Run container from local image
         run: |
