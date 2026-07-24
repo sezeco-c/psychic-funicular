@@ -140,3 +140,4 @@ Config version: 0 → 33
   ⚠ Node.js not found (optional, needed for browser tools)
 
 ◆ API Connectivity
+  Running 29 connectivity checks in parallel…{"time":"2026-07-24T07:31:22.214799961Z","level":"INFO","source":{"function":"main.(*enableCommand).run","file":"/__w/zrok/zrok/cmd/zrok2/enable.go","line":142},"msg":"the zrok environment was successfully enabled..."}
