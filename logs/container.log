@@ -148,3 +148,11 @@ Installed 95 packages in 274ms
 {"time":"2026-07-24T10:10:14.255828855Z","level":"INFO","source":{"function":"main.(*enableCommand).run","file":"/__w/zrok/zrok/cmd/zrok2/enable.go","line":87},"msg":"contacting the zrok service..."}
 /home/runner/workspace/scripts/hermes.sh: line 56: docker: command not found
 {"time":"2026-07-24T10:10:16.873979399Z","level":"INFO","source":{"function":"main.(*enableCommand).run","file":"/__w/zrok/zrok/cmd/zrok2/enable.go","line":142},"msg":"the zrok environment was successfully enabled..."}
+               _    
+ _____ __ ___ | | __
+|_  / '__/ _ \| |/ /
+ / /| | | (_) |   < 
+/___|_|  \___/|_|\_\
+
+v2.0.4 [6ff92039]
+
