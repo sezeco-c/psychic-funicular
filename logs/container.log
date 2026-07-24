@@ -30,3 +30,89 @@ Installed 1 package in 2ms
   [32m➜[0m  Link:  [4;36mhttps://sshx.io/s/KcLfeAxy88#aY5C7UprwFZiLH[0m
   [32m➜[0m  Shell: [38;5;8m/bin/bash[0m
 
+
+┌─────────────────────────────────────────────────────────┐
+│                 🩺 Hermes Doctor                        │
+└─────────────────────────────────────────────────────────┘
+
+◆ Security Advisories
+  ✓ No active security advisories
+
+◆ MCP Server Security
+  ✓ No suspicious MCP stdio commands
+
+◆ Python Environment
+  ✓ Python 3.13.14
+  ✓ SQLite 3.53.1
+    → SQLite source id: 2026-05-05 10:34:17 c88b22011a54b4f6fbd149e9f8e4…
+  ✓ Virtual environment active
+  ✓ Version files consistent (0.19.0)
+
+◆ SSL / CA Certificates
+  ✓ SSL CA certificate bundle is valid
+
+◆ Required Packages
+  ✓ OpenAI SDK
+  ✓ Rich (terminal UI)
+  ✓ python-dotenv
+  ✓ PyYAML
+  ✓ HTTPX
+  ✓ Croniter (cron expressions) (optional)
+  ⚠ python-telegram-bot (optional, not installed)
+  ⚠ discord.py (optional, not installed)
+
+◆ Configuration Files
+  ✗ ~/.hermes/.env file missing
+  ✓ Created empty ~/.hermes/.env
+    → Run 'hermes setup' to configure API keys
+  ✓ ~/.hermes/config.yaml exists
+  ⚠ Config version outdated (v0 → v33) (new settings available)
+  ✓ Migrated tool progress to config.yaml: all
+  ✓ Added timezone to config.yaml: (server-local)
+  ✓ Added display.interim_assistant_messages=true
+  ✓ Plugins now opt-in: no existing plugins to grandfather. Use `hermes plugins enable <name>` to activate.
+  ✓ Curator settings now available (enabled, interval_hours, min_idle_hours, stale_after_days, archive_after_days, consolidate, prune_builtins, backup) — edit via `hermes config set`
+  ✓ auxiliary.curator settings now available (provider, model, base_url, api_key, timeout, extra_body, reasoning_effort) — edit via `hermes config set`
+  ✓ Turned off verify-on-stop (agent.verify_on_stop: false). Set it to true to re-enable, or "auto" for the legacy surface-aware behavior.
+Config version: 0 → 33
+  ✓ Config migrated to latest version
+  ✓ No deprecated config keys or env vars
+
+◆ xAI Model Retirement (May 15, 2026)
+  ✓ No retired xAI models in config
+
+◆ Auth Providers
+  ⚠ Nous Portal auth (not logged in)
+  ⚠ OpenAI Codex auth (not logged in)
+    → No Codex credentials stored. Run `hermes auth` to authenticate.
+    → codex CLI not installed (optional — only required to import tokens from an existing Codex CLI login)
+  ⚠ MiniMax OAuth (not logged in)
+  ⚠ xAI OAuth (not logged in)
+    → No xAI OAuth credentials stored. Select xAI Grok OAuth (SuperGrok / Premium+) in `hermes model`.
+
+◆ Directory Structure
+  ✓ ~/.hermes directory exists
+  ✓ ~/.hermes/cron/ exists
+  ✓ ~/.hermes/sessions/ exists
+  ✓ ~/.hermes/logs/ exists
+  ✓ ~/.hermes/skills/ exists
+  ✓ ~/.hermes/memories/ exists
+  ✓ ~/.hermes/SOUL.md exists (persona configured)
+  ✓ ~/.hermes/memories/ directory exists
+    → MEMORY.md not created yet (will be created when the agent first writes a memory)
+    → USER.md not created yet (will be created when the agent first writes a memory)
+    → ~/.hermes/state.db not created yet (will be created on first session)
+
+◆ Command Installation
+  ✓ Venv entry point exists (.venv/bin/hermes)
+  ✗ ~/.local/bin/hermes not found (hermes command may not work outside the venv)
+  ✓ Created symlink: ~/.local/bin/hermes → /home/runner/hermes-agent/.venv/bin/hermes
+
+◆ External Tools
+  ✓ git
+  ⚠ ripgrep (rg) not found (file search uses grep fallback)
+    → Install for faster search: sudo apt install ripgrep
+    → Running inside a container — using local terminal backend (docker-in-docker is not configured by default)
+  ⚠ Node.js not found (optional, needed for browser tools)
+
+◆ API Connectivity
