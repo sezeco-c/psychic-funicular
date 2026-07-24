@@ -5,169 +5,5 @@ Get:3 http://deb.debian.org/debian-security stable-security InRelease [43.4 kB]
 Get:4 http://deb.debian.org/debian stable/main amd64 Packages [9673 kB]
 Get:5 http://deb.debian.org/debian stable-updates/main amd64 Packages [4412 B]
 Get:6 http://deb.debian.org/debian-security stable-security/main amd64 Packages [227 kB]
-Fetched 10.1 MB in 1s (11.7 MB/s)
+Fetched 10.1 MB in 1s (11.5 MB/s)
 Reading package lists...
-branch 'main' set up to track 'origin/main'.
-Cloning into '/home/runner/hermes-agent'...
-[0m[35;1m↯ Downloading sshx from [4mhttps://s3.amazonaws.com/sshx/sshx-x86_64-unknown-linux-musl.tar.gz[0m
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 2869k  100 2869k    0     0  8009k      0 --:--:-- --:--:-- --:--:-- 8016k
-
-[0m[35;1m↯ Adding sshx binary to [4m/tmp/tmp.kIdWbChpCn[0m
-
-[0m[35;1m↯ Done! You can now run sshx.[0m
-
-  [1;32msshx[0m [32mv0.4.1[0m
-
-  [32m➜[0m  Link:  [4;36mhttps://sshx.io/s/IX5dl8Cn96#5NCFbybsY2q9Ir[0m
-  [32m➜[0m  Shell: [38;5;8m/bin/bash[0m
-
-email=takuxit@cambrigeuni.edu.pl
-{"time":"2026-07-24T20:37:29.844655406Z","level":"INFO","source":{"function":"main.(*enableCommand).run","file":"/__w/zrok/zrok/cmd/zrok2/enable.go","line":87},"msg":"contacting the zrok service..."}
-{"time":"2026-07-24T20:37:32.568854345Z","level":"INFO","source":{"function":"main.(*enableCommand).run","file":"/__w/zrok/zrok/cmd/zrok2/enable.go","line":142},"msg":"the zrok environment was successfully enabled..."}
-Updating files:   0% (2/7347)Updating files:   1% (74/7347)Updating files:   2% (147/7347)Updating files:   3% (221/7347)Updating files:   4% (294/7347)Updating files:   5% (368/7347)Updating files:   6% (441/7347)Updating files:   7% (515/7347)Updating files:   8% (588/7347)Updating files:   9% (662/7347)Updating files:  10% (735/7347)Updating files:  11% (809/7347)Updating files:  12% (882/7347)Updating files:  13% (956/7347)Updating files:  14% (1029/7347)Updating files:  14% (1093/7347)Updating files:  15% (1103/7347)Updating files:  16% (1176/7347)Updating files:  17% (1249/7347)Updating files:  18% (1323/7347)Updating files:  19% (1396/7347)Updating files:  20% (1470/7347)Updating files:  21% (1543/7347)Updating files:  22% (1617/7347)Updating files:  23% (1690/7347)Updating files:  24% (1764/7347)Updating files:  25% (1837/7347)Updating files:  26% (1911/7347)Updating files:  27% (1984/7347)Updating files:  28% (2058/7347)Updating files:  29% (2131/7347)Updating files:  30% (2205/7347)Updating files:  31% (2278/7347)Updating files:  32% (2352/7347)Updating files:  33% (2425/7347)Updating files:  34% (2498/7347)Updating files:  35% (2572/7347)Updating files:  36% (2645/7347)Updating files:  37% (2719/7347)Updating files:  38% (2792/7347)Updating files:  39% (2866/7347)Updating files:  40% (2939/7347)Updating files:  41% (3013/7347)Updating files:  42% (3086/7347)Updating files:  43% (3160/7347)Updating files:  44% (3233/7347)Updating files:  45% (3307/7347)Updating files:  46% (3380/7347)Updating files:  47% (3454/7347)Updating files:  48% (3527/7347)Updating files:  49% (3601/7347)Updating files:  50% (3674/7347)Updating files:  51% (3747/7347)Updating files:  52% (3821/7347)Updating files:  53% (3894/7347)Updating files:  54% (3968/7347)Updating files:  55% (4041/7347)Updating files:  56% (4115/7347)Updating files:  57% (4188/7347)Updating files:  58% (4262/7347)Updating files:  59% (4335/7347)Updating files:  60% (4409/7347)Updating files:  61% (4482/7347)Updating files:  62% (4556/7347)Updating files:  63% (4629/7347)Updating files:  64% (4703/7347)Updating files:  65% (4776/7347)Updating files:  66% (4850/7347)Updating files:  67% (4923/7347)Updating files:  68% (4996/7347)Updating files:  69% (5070/7347)Updating files:  70% (5143/7347)Updating files:  71% (5217/7347)Updating files:  72% (5290/7347)Updating files:  73% (5364/7347)Updating files:  74% (5437/7347)Updating files:  75% (5511/7347)Updating files:  76% (5584/7347)Updating files:  77% (5658/7347)Updating files:  78% (5731/7347)Updating files:  79% (5805/7347)Updating files:  80% (5878/7347)Updating files:  81% (5952/7347)Updating files:  82% (6025/7347)Updating files:  83% (6099/7347)Updating files:  84% (6172/7347)Updating files:  85% (6245/7347)Updating files:  86% (6319/7347)Updating files:  87% (6392/7347)Updating files:  88% (6466/7347)Updating files:  89% (6539/7347)Updating files:  90% (6613/7347)Updating files:  91% (6686/7347)Updating files:  92% (6760/7347)Updating files:  93% (6833/7347)Updating files:  94% (6907/7347)Updating files:  95% (6980/7347)Updating files:  96% (7054/7347)Updating files:  97% (7127/7347)Updating files:  98% (7201/7347)Updating files:  99% (7274/7347)Updating files:  99% (7339/7347)Updating files: 100% (7347/7347)Updating files: 100% (7347/7347), done.
-
-real	0m11.518s
-user	0m2.892s
-sys	0m1.534s
-Downloading cpython-3.13.14-linux-x86_64-gnu (download) (33.2MiB)
-               _    
- _____ __ ___ | | __
-|_  / '__/ _ \| |/ /
- / /| | | (_) |   < 
-/___|_|  \___/|_|\_\
-
-v2.0.4 [6ff92039]
-
- Downloaded cpython-3.13.14-linux-x86_64-gnu (download)
-Using CPython 3.13.14
-Creating virtual environment at: .venv
-Activate with: source .venv/bin/activate
-Resolved 95 packages in 388ms
-   Building hermes-agent @ file:///home/runner/hermes-agent
-Downloading pygments (1.2MiB)
-Downloading cryptography (4.3MiB)
-Downloading google-api-python-client (14.3MiB)
-Downloading openai (1.1MiB)
-Downloading aiohttp (1.7MiB)
-Downloading pillow (6.8MiB)
-Downloading pydantic-core (2.0MiB)
-Downloading uvloop (4.2MiB)
- Downloaded pydantic-core
- Downloaded aiohttp
- Downloaded pillow
- Downloaded uvloop
- Downloaded cryptography
- Downloaded pygments
- Downloaded google-api-python-client
- Downloaded openai
-      Built hermes-agent @ file:///home/runner/hermes-agent
-Prepared 83 packages in 2.48s
-Installed 95 packages in 156ms
- + agent-client-protocol==0.9.0
- + aiohappyeyeballs==2.7.1
- + aiohttp==3.14.1
- + aiosignal==1.4.0
- + annotated-doc==0.0.4
- + annotated-types==0.8.0
- + anyio==4.14.2
- + attrs==26.1.0
- + certifi==2026.5.20
- + cffi==2.1.0
- + charset-normalizer==3.4.9
- + click==8.4.2
- + croniter==6.0.0
- + cryptography==46.0.7
- + defusedxml==0.7.1
- + distro==1.9.0
- + fastapi==0.133.1
- + fire==0.7.1
- + frozenlist==1.8.0
- + google-api-core==2.33.0
- + google-api-python-client==2.194.0
- + google-auth==2.56.2
- + google-auth-httplib2==0.3.1
- + google-auth-oauthlib==1.3.1
- + googleapis-common-protos==1.75.0
- + h11==0.16.0
- + hermes-agent==0.19.0 (from file:///home/runner/hermes-agent)
- + httpcore==1.0.9
- + httplib2==0.32.0
- + httptools==0.8.0
- + httpx==0.28.1
- + httpx-sse==0.4.3
- + idna==3.18
- + jinja2==3.1.6
- + jiter==0.16.0
- + jsonschema==4.26.0
- + jsonschema-specifications==2025.9.1
- + markdown==3.10.2
- + markdown-it-py==4.2.0
- + markupsafe==3.0.3
- + mcp==1.26.0
- + mdurl==0.1.2
- + multidict==6.7.1
- + oauthlib==3.3.1
- + openai==2.24.0
- + packaging==26.0
- + pathspec==1.1.1
- + pillow==12.2.0
- + prompt-toolkit==3.0.52
- + propcache==0.5.2
- + proto-plus==1.28.2
- + protobuf==7.35.1
- + psutil==7.2.2
- + ptyprocess==0.7.0
- + pyasn1==0.6.4
- + pyasn1-modules==0.4.2
- + pycparser==3.0
- + pydantic==2.13.4
- + pydantic-core==2.46.4
- + pydantic-settings==2.14.2
- + pygments==2.20.0
- + pyjwt==2.13.0
- + pyparsing==3.3.2
- + python-dateutil==2.9.0.post0
- + python-dotenv==1.2.2
- + python-multipart==0.0.27
- + pytz==2026.2
- + pyyaml==6.0.3
- + referencing==0.37.0
- + requests==2.33.0
- + requests-oauthlib==2.0.0
- + rich==14.3.3
- + rpds-py==2026.6.3
- + ruamel-yaml==0.18.17
- + ruamel-yaml-clib==0.2.15
- + simple-term-menu==1.6.6
- + six==1.17.0
- + sniffio==1.3.1
- + socksio==1.0.0
- + sse-starlette==3.4.6
- + starlette==1.0.1
- + tenacity==9.1.4
- + termcolor==3.3.0
- + tqdm==4.69.1
- + typing-extensions==4.16.0
- + typing-inspection==0.4.2
- + uritemplate==4.2.0
- + urllib3==2.7.0
- + uvicorn==0.41.0
- + uvloop==0.22.1
- + watchfiles==1.2.0
- + wcwidth==0.8.2
- + websockets==15.0.1
- + yarl==1.24.5
- + youtube-transcript-api==1.2.4
-/home/runner/workspace/scripts/hermes.sh: line 51: docker: command not found
-8080 -> https://nxpyxx3wstbs.shares.zrok.io
-8787 -> https://6s2a0j6vo4dw.shares.zrok.io
-Port 8080 -> https://retrieve-pursuit-seat-patient.trycloudflare.com
-Port 8787 -> https://ipod-cables-felt-jesus.trycloudflare.com
-Port 36831 -> https://processes-reduction-motorcycles-domestic.trycloudflare.com
-Port 5555 -> https://emissions-owen-verde-goal.trycloudflare.com
-5555 -> https://vd60kcrv54am.shares.zrok.io
-Port 5000 -> https://newbie-than-learn-enhance.trycloudflare.com
-5000 -> https://lzwipx7h3yo9.shares.zrok.io
-38631 -> https://ciqg3lqtje1m.shares.zrok.io
