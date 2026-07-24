@@ -85,18 +85,18 @@ jobs:
       - name: Stream logs and push on new lines
         run: |
           mkdir -p logs
-          > logs/container.logs
-          docker logs -f hermes > logs/container.logs 2>&1 &
+          > logs/container.log
+          docker logs -f hermes > logs/container.log 2>&1 &
 
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
           last_lines=0
           while true; do
-            current_lines=$(wc -l < logs/container.logs)
+            current_lines=$(wc -l < logs/container.log)
             if [ "$current_lines" -gt "$last_lines" ]; then
               git pull --ff-only origin main || git pull --rebase origin main || true
-              git add logs/container.logs
+              git add logs/container.log
               if ! git diff --cached --quiet; then
                 git commit -m "Update logs - $(date -u +%Y-%m-%d_%H:%M:%S)"
                 git push || true
