@@ -5,44 +5,28 @@ Get:3 http://deb.debian.org/debian-security stable-security InRelease [43.4 kB]
 Get:4 http://deb.debian.org/debian stable/main amd64 Packages [9673 kB]
 Get:5 http://deb.debian.org/debian stable-updates/main amd64 Packages [4412 B]
 Get:6 http://deb.debian.org/debian-security stable-security/main amd64 Packages [227 kB]
-Fetched 10.1 MB in 1s (8604 kB/s)
+Fetched 10.1 MB in 1s (12.3 MB/s)
 Reading package lists...
 branch 'main' set up to track 'origin/main'.
 Already up to date.
-Resolved 95 packages in 18ms
+Resolved 95 packages in 111ms
    Building hermes-agent @ file:///home/runner/hermes-agent
       Built hermes-agent @ file:///home/runner/hermes-agent
-Prepared 1 package in 1.22s
+Prepared 1 package in 1.26s
 Uninstalled 1 package in 2ms
-Installed 1 package in 2ms
+Installed 1 package in 3ms
  ~ hermes-agent==0.19.0 (from file:///home/runner/hermes-agent)
 [0m[35;1m↯ Downloading sshx from [4mhttps://s3.amazonaws.com/sshx/sshx-x86_64-unknown-linux-musl.tar.gz[0m
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 2869k  100 2869k    0     0  4751k      0 --:--:-- --:--:-- --:--:-- 4759k
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 2869k  100 2869k    0     0  8108k      0 --:--:-- --:--:-- --:--:-- 8129k
 
-[0m[35;1m↯ Adding sshx binary to [4m/tmp/tmp.8nhi8AFU9Y[0m
+[0m[35;1m↯ Adding sshx binary to [4m/tmp/tmp.72dyIrMF5z[0m
 
 [0m[35;1m↯ Done! You can now run sshx.[0m
 
   [1;32msshx[0m [32mv0.4.1[0m
 
-  [32m➜[0m  Link:  [4;36mhttps://sshx.io/s/YLOkLqG4km#XG4XPONUvC5s07[0m
+  [32m➜[0m  Link:  [4;36mhttps://sshx.io/s/7qBbS4upTy#xKRTSgUHR6tW0r[0m
   [32m➜[0m  Shell: [38;5;8m/bin/bash[0m
 
-email=huyifa@cambrigeuni.edu.pl
-{"time":"2026-07-24T05:06:06.650083278Z","level":"INFO","source":{"function":"main.(*enableCommand).run","file":"/__w/zrok/zrok/cmd/zrok2/enable.go","line":87},"msg":"contacting the zrok service..."}
-{"time":"2026-07-24T05:06:12.114222622Z","level":"INFO","source":{"function":"main.(*enableCommand).run","file":"/__w/zrok/zrok/cmd/zrok2/enable.go","line":142},"msg":"the zrok environment was successfully enabled..."}
-               _    
- _____ __ ___ | | __
-|_  / '__/ _ \| |/ /
- / /| | | (_) |   < 
-/___|_|  \___/|_|\_\
-
-v2.0.4 [6ff92039]
-
-8080 -> https://esijbg5x6ty3.shares.zrok.io
-8787 -> https://2yep49oxi25u.shares.zrok.io
-5555 -> https://3131jp8secgq.shares.zrok.io
-38631 -> https://83aowj1cypt8.shares.zrok.io
-5000 -> https://ehorvtgwchkq.shares.zrok.io
