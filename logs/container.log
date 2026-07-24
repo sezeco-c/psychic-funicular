@@ -38,3 +38,11 @@ Downloading pydantic-core (2.0MiB)
 Downloading openai (1.1MiB)
 Downloading google-api-python-client (14.3MiB)
 Downloading uvloop (4.2MiB)
+ Downloaded pydantic-core
+ Downloaded aiohttp
+ Downloaded uvloop
+ Downloaded pillow
+ Downloaded cryptography
+ Downloaded pygments
+ Downloaded google-api-python-client
+ Downloaded openai
