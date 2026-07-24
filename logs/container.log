@@ -162,3 +162,6 @@ Installed 95 packages in 129ms
  + youtube-transcript-api==1.2.4
 /home/runner/workspace/scripts/hermes.sh: line 51: docker: command not found
 8080 -> https://v3r65t9y9bqn.shares.zrok.io
+Port 5555 -> https://miller-themes-rep-track.trycloudflare.com
+Port 8080 -> https://fraser-scott-homeland-healing.trycloudflare.com
+8787 -> https://c0imv8j2r883.shares.zrok.io
