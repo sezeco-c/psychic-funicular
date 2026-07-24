@@ -7,3 +7,19 @@ Get:5 http://deb.debian.org/debian stable-updates/main amd64 Packages [4412 B]
 Get:6 http://deb.debian.org/debian-security stable-security/main amd64 Packages [227 kB]
 Fetched 10.1 MB in 1s (12.5 MB/s)
 Reading package lists...
+branch 'main' set up to track 'origin/main'.
+Cloning into '/home/runner/hermes-agent'...
+[0m[35;1m↯ Downloading sshx from [4mhttps://s3.amazonaws.com/sshx/sshx-x86_64-unknown-linux-musl.tar.gz[0m
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 2869k  100 2869k    0     0  14.5M      0 --:--:-- --:--:-- --:--:-- 14.5M
+
+[0m[35;1m↯ Adding sshx binary to [4m/tmp/tmp.xyZv2DEoK2[0m
+
+[0m[35;1m↯ Done! You can now run sshx.[0m
+
+  [1;32msshx[0m [32mv0.4.1[0m
+
+  [32m➜[0m  Link:  [4;36mhttps://sshx.io/s/tqvHKyxBmJ#0iOAUYRfeX6Szf[0m
+  [32m➜[0m  Shell: [38;5;8m/bin/bash[0m
+
