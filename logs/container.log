@@ -161,3 +161,4 @@ Installed 95 packages in 127ms
  + yarl==1.24.5
  + youtube-transcript-api==1.2.4
 /home/runner/workspace/scripts/hermes.sh: line 51: docker: command not found
+KV_NS=93e40f732ff74039a5421267b614775d (existing worker binding)
