@@ -24,3 +24,7 @@ Already up to date.
   [32m➜[0m  Link:  [4;36mhttps://sshx.io/s/AlXhi2szeQ#4uuQY2bX72VlX8[0m
   [32m➜[0m  Shell: [38;5;8m/bin/bash[0m
 
+ Downloaded cpython-3.13.14-linux-x86_64-gnu (download)
+Using CPython 3.13.14
+Creating virtual environment at: .venv
+Activate with: source .venv/bin/activate
