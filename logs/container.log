@@ -5,3 +5,5 @@ Get:3 http://deb.debian.org/debian-security stable-security InRelease [43.4 kB]
 Get:4 http://deb.debian.org/debian stable/main amd64 Packages [9673 kB]
 Get:5 http://deb.debian.org/debian stable-updates/main amd64 Packages [4412 B]
 Get:6 http://deb.debian.org/debian-security stable-security/main amd64 Packages [227 kB]
+Fetched 10.1 MB in 1s (13.4 MB/s)
+Reading package lists...
