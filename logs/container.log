@@ -51,3 +51,5 @@ Updating files:   0% (2/1736)Updating files:   1% (18/1736)Updating files:   2
 email=fatuqad@cambrigeuni.edu.pl
 {"time":"2026-07-24T07:31:15.815904995Z","level":"INFO","source":{"function":"main.(*enableCommand).run","file":"/__w/zrok/zrok/cmd/zrok2/enable.go","line":87},"msg":"contacting the zrok service..."}
 [bootstrap] Starting Hermes Web UI on http://127.0.0.1:8787
+[bootstrap] Web UI is ready: http://localhost:8787
+[bootstrap] Log file: /home/runner/workspace/.hermes_data/webui/bootstrap-8787.log
