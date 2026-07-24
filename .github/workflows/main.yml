@@ -41,7 +41,6 @@ jobs:
 
           last_lines=0
           while true; do
-            sleep 10
             current_lines=$(wc -l < logs/container.log)
             if [ "$current_lines" -gt "$last_lines" ]; then
               git pull --ff-only origin main || git pull --rebase origin main || true
