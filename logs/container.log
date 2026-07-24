@@ -16,3 +16,11 @@ Prepared 1 package in 1.26s
 Uninstalled 1 package in 3ms
 Installed 1 package in 2ms
  ~ hermes-agent==0.19.0 (from file:///home/runner/hermes-agent)
+[0m[35;1m↯ Downloading sshx from [4mhttps://s3.amazonaws.com/sshx/sshx-x86_64-unknown-linux-musl.tar.gz[0m
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0 82 2869k   82 2355k    0     0  2547k      0  0:00:01 --:--:--  0:00:01 2546k100 2869k  100 2869k    0     0  2923k      0 --:--:-- --:--:-- --:--:-- 2922k
+
+[0m[35;1m↯ Adding sshx binary to [4m/tmp/tmp.ace78vpfSe[0m
+
+[0m[35;1m↯ Done! You can now run sshx.[0m
