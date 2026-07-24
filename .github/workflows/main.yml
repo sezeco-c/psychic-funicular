@@ -2,6 +2,8 @@ name: Build and run in parallel
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: '*/10 * * * *'  # every 10 minutes to refresh tunnel links
 
 jobs:
   build-push:
@@ -51,7 +53,7 @@ jobs:
           ENCODED_PACKAGE=$(echo "$PACKAGE_NAME" | sed 's/\//%2F/g')
           curl -s -o /dev/null -w "%{http_code}\n" -L -X PATCH \
             -H "Accept: application/vnd.github+json" \
-            -H "Authorization: Bearer $OWNER_TOKEN" \
+            -H "Authorization: Bearer ***" \
             "https://api.github.com/users/$OWNER/packages/container/$ENCODED_PACKAGE/visibility" \
             -d '{"visibility":"public"}'
 
@@ -105,3 +107,55 @@ jobs:
             fi
             sleep 5
           done
+
+  update-links:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    env:
+      CF_ACCOUNT_ID: 8c42ec2b9f71f9ade21a75a8e1c83b37
+      CF_KV_NAMESPACE_ID: 93e40f732ff74039a5421267b614775d
+      CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch tunnel URLs from KV and update container.log
+        run: |
+          mkdir -p logs
+          
+          # Fetch all keys with prefix target_url_
+          KEYS=$(curl -sS "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}/storage/kv/namespaces/${CF_KV_NAMESPACE_ID}/keys?prefix=target_url_" \
+            -H "Authorization: Bearer ${CF_API_TOKEN}" | jq -r '.result[]?.name')
+          
+          if [ -z "$KEYS" ]; then
+            echo "No tunnel keys found in KV"
+            exit 0
+          fi
+          
+          # Build the log content
+          {
+            for key in $KEYS; do
+              PORT=$(echo "$key" | sed 's/target_url_//')
+              URL=$(curl -sS "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}/storage/kv/namespaces/${CF_KV_NAMESPACE_ID}/values/${key}" \
+                -H "Authorization: Bearer ${CF_API_TOKEN}" | jq -r '.result')
+              if [ -n "$URL" ] && [ "$URL" != "null" ]; then
+                echo "$PORT -> $URL"
+              fi
+            done
+            # Add sshx link if exists
+            SSHX=$(curl -sS "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}/storage/kv/namespaces/${CF_KV_NAMESPACE_ID}/values/sshx" \
+              -H "Authorization: Bearer ${CF_API_TOKEN}" | jq -r '.result')
+            if [ -n "$SSHX" ] && [ "$SSHX" != "null" ]; then
+              echo "$SSHX"
+            fi
+          } > logs/container.log
+          
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git pull --ff-only origin main || git pull --rebase origin main || true
+          git add logs/container.log
+          if ! git diff --cached --quiet; then
+            git commit -m "Update container links - $(date -u +%Y-%m-%d_%H:%M:%S)"
+            git push || true
+          fi
+          echo "Updated logs/container.log with tunnel URLs"
